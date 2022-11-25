@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import WhatsApp from './assets/WhatsApp.svg';
 import EnvelopeClosed from './assets/Envelope Closed.svg';
-import LinkedIn from './assets/LinkedIn.svg';
+import LinkedIn from './assets/Linkedin.svg';
 
 const Footer = () => {
   return (
