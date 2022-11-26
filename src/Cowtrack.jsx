@@ -25,9 +25,9 @@ const TrakaCaseStudy = () => {
         <HeaderWrapper>
           <Header />
         </HeaderWrapper>
-        <HeroImagWrapper>
+        <HeroImaWrapper>
           <HeroImage src={TrakaHero} alt="" />
-        </HeroImagWrapper>
+        </HeroImaWrapper>
       </AboveFold>
       <TextSection>
         <div>
@@ -250,7 +250,7 @@ const AboveFold = styled.div`
   overflow: hidden;
 `;
 const HeroImage = styled.img``;
-const HeroImagWrapper = styled.div`
+const HeroImaWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 64px;
