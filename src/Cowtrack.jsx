@@ -10,7 +10,7 @@ import ProblemStatement from './assets/problemstatement.svg';
 import Solution from './assets/rename.png';
 import TrakaFlow from './assets/trakaflow.svg';
 import TrakaHome from './assets/trakahome.png';
-import Tracking from './assets/tracking.png';
+// import Tracking from './assets/tracking.png';
 import TrackResult from './assets/trackresults.png';
 import ToLocation from './assets/tolacation.png';
 import NextIcon from './assets/next.svg';
@@ -147,9 +147,7 @@ const TrakaCaseStudy = () => {
               explain to them how to use it.
             </Text>
           </div>
-          <div>
-            <Screen src={Tracking} alt="" />
-          </div>
+          <div>{/* <Screen src={Tracking} alt="" /> */}</div>
         </ContentWrapper>
       </TextSection>
       <TextSection>
