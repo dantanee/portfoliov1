@@ -260,6 +260,7 @@ const IncentiveCaseStudy = () => {
               fontSize: '20px',
               fontWeight: '800',
               color: '#121212',
+              zIndex: 10,
             }}
             to="/tarkin"
           >
