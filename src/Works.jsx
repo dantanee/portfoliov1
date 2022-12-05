@@ -35,21 +35,18 @@ const Works = () => {
                 social media and reward winners in btc(SATS).
               </p>
             </div>
-            <NavLink
-              style={{ textDecoration: 'none', zIndex: '10' }}
-              to="/incentive"
-            >
+            <NavLink style={{ textDecoration: 'none', zIndex: '10' }} to="/">
               <Button
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                hover={hover}
+                style={{ border: 'none' }}
               >
-                <span>VIEW CASE STUDY</span>
-                {hover ? (
+                <span>CASE STUDY COMING SOON</span>
+                {/* {hover ? (
                   <img src={NextIcon} alt="" />
                 ) : (
                   <img src={ArrowLeft} alt="" />
-                )}
+                )} */}
               </Button>
             </NavLink>
           </TextSection>
@@ -134,21 +131,18 @@ const Works = () => {
                 overview into how their business is doing. .
               </p>
             </div>
-            <NavLink
-              style={{ textDecoration: 'none', zIndex: '10' }}
-              to="/incentive"
-            >
+            <NavLink style={{ textDecoration: 'none', zIndex: '10' }} to="/">
               <Button
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                hover={hover}
+                style={{ border: 'none' }}
               >
-                <span>VIEW CASE STUDY</span>
-                {hover ? (
+                <span>CASE STUDY COMING SOON</span>
+                {/* {hover ? (
                   <img src={NextIcon} alt="" />
                 ) : (
                   <img src={ArrowLeft} alt="" />
-                )}
+                )} */}
               </Button>
             </NavLink>
           </TextSection>
