@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import styled from 'styled-components';
 import IncentiveBackground from './assets/incentive-landing.svg';
 import RightHand from './assets/right-hand.svg';
@@ -25,9 +25,11 @@ import ChildHomepage from './assets/childhomepage.png';
 import CreateGoal from './assets/creategoal.png';
 import Transfer from './assets/transfers.png';
 import NextIcon from './assets/next.svg';
+import ArrowLeft from './assets/left-arrow.svg';
 import { Link } from 'react-router-dom';
 
 const IncentiveCaseStudy = () => {
+  const [hover, setHover] = useState(false);
   return (
     <Wrapper>
       <HeaderWrapper>
@@ -242,17 +244,20 @@ const IncentiveCaseStudy = () => {
         </ContentWrapper>
       </TextSection>
       <Ending>
-        <Heading>LEARNINGS</Heading>
-        <Text>
-          This was a fun project to work on,had to do a lot of thinking and
-          interations considering it was my first project in Design School and I
-          was given a brief to work with.I learnt alot on how to keep user goals
-          front-and-center while designing.I spent some time iterating over
-          ideas that i thought were cool only to later realise were unnecessary
-          and not aligned to the project goals On the visual side,I learnt how
-          typography,color and icons should be consistent with brand goals.
-        </Text>
-        <Next>
+        <div>
+          <Heading>LEARNINGS</Heading>
+          <Text>
+            This was a fun project to work on,had to do a lot of thinking and
+            interations considering it was my first project in Design School and
+            I was given a brief to work with.I learnt alot on how to keep user
+            goals front-and-center while designing.I spent some time iterating
+            over ideas that i thought were cool only to later realise were
+            unnecessary and not aligned to the project goals On the visual
+            side,I learnt how typography,color and icons should be consistent
+            with brand goals.
+          </Text>
+        </div>
+        {/* <Next>
           <Link
             style={{
               textDecoration: 'none',
@@ -267,7 +272,24 @@ const IncentiveCaseStudy = () => {
             Next Project{' '}
           </Link>{' '}
           <img src={NextIcon} />
-        </Next>
+        </Next> */}
+        <NavLink style={{ textDecoration: 'none', zIndex: '10' }} to="/tarkin">
+          <Button
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            hover={hover}
+          >
+            <span>NEXT PROJECT</span>
+            {hover ? (
+              //
+              // ) : (
+              //
+              <img src={ArrowLeft} alt="" />
+            ) : (
+              <img src={NextIcon} alt="" />
+            )}
+          </Button>
+        </NavLink>
       </Ending>
     </Wrapper>
   );
@@ -297,11 +319,11 @@ const AboveFold = styled.div`
 `;
 const RightImage = styled.img`
   position: absolute;
-  right: 200px;
-  top: 200px;
+  right: 10px;
+  top: 80px;
 `;
 const LeftImage = styled(RightImage)`
-  left: 200px;
+  left: 10px;
 `;
 const Heading = styled.h1`
   font-family: 'DIN2014', sans-serif;
@@ -336,14 +358,34 @@ const Goal = styled.div`
     margin-bottom: 16px;
   }
 `;
-// const Styleguide = styled(Goal)`
-//   padding: 64px;
-//   & h2 {
-//     font-family: 'ProximaSoft';
-//     font-weight: 800;
-//     font-size: 48px;
-//   }
-// `;
+export const Button = styled.button`
+  display: flex;
+  gap: 8px;
+  height: 51px;
+  width: 258px;
+  color: #121212;
+  font-family: 'DIN2014';
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #121212;
+
+  & span {
+    font-size: 20px;
+    font-weight: 500;
+  }
+`;
+export const NavLink = styled(Link)`
+  align-self: flex-end;
+  position: absolute;
+  right: 10%;
+  top: 450px;
+  & :hover {
+    background: #121212;
+    color: #ffffff;
+  }
+`;
 const Explainer = styled.div`
   padding: 32px 24px;
   background-color: '#f6f7f7';
@@ -361,7 +403,7 @@ const Screen = styled.img`
 `;
 const Ending = styled.div`
   position: relative;
-  padding: 128px 200px;
+  padding: 128px 200px 300px 128px;
 `;
 const Next = styled.span`
   display: flex;

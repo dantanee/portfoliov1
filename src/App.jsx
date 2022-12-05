@@ -12,12 +12,14 @@ import IncentiveCaseStudy from './Incentive';
 import TarkinCaseStudy from './Tarkin';
 import Home from './Home';
 import About from './About';
+import DiffCaseStudy from './Difftraka';
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/difftraka" element={<DiffCaseStudy />} />
         <Route path="/incentive" element={<IncentiveCaseStudy />} />
         <Route path="/cowtraka" element={<TrakaCaseStudy />} />
         <Route path="/tarkin" element={<TarkinCaseStudy />} />

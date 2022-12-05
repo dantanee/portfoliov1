@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import Mockup from './assets/incentive mockup.png';
+import IncentiveMockup from './assets/incentivemockup.svg';
 import ArrowLeft from './assets/left-arrow.svg';
 import InBaground from './assets/incentive-background.png';
 import TarBaground from './assets/tarkin-background.svg';
 import TarkinMockup from './assets/tarkin-mockup.svg';
 import TrakaMockup from './assets/tracka-mockup.svg';
 import NextIcon from './assets/nexticon.svg';
+import BtcMockup from './assets/BtcMockup.svg';
+import AdasheMockup from './assets/adashemockup.svg';
+import GonaMockup from './assets/gonamock.svg';
 import { Link } from 'react-router-dom';
 
 import { useState } from 'react';
@@ -16,20 +19,20 @@ const Works = () => {
   return (
     <Wrapper>
       <WorksWrapper>
-        <Heading2>SOME WORKS</Heading2>
+        <Heading2>SELECTED WORKS</Heading2>
         <Work>
-          <MockupWrapper>
-            <img src={Mockup} alt="" />
-          </MockupWrapper>
-          <TextSection>
+          <BtcMockupWrapper>
+            <img src={BtcMockup} alt="" />
+          </BtcMockupWrapper>
+          <TextSection style={{ right: '-10px' }}>
             <div
               style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}
             >
-              <h1>INCENTIVE</h1>
+              <h1>BitAdopt</h1>
               <p>
-                An app for both parents and children. Main goal is to teach
-                children to be financially healthy,by making them do small tasks
-                to earn rewards and also save towards goals.
+                Encouraging bitcoin adoption in Africa by allowing individuals
+                easily gift bitcoin and also create campaigns(giveaway) on
+                social media and reward winners in btc(SATS).
               </p>
             </div>
             <NavLink
@@ -39,6 +42,7 @@ const Works = () => {
               <Button
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
+                hover={hover}
               >
                 <span>VIEW CASE STUDY</span>
                 {hover ? (
@@ -50,7 +54,110 @@ const Works = () => {
             </NavLink>
           </TextSection>
         </Work>
-        <TarkinWork>
+        <Work>
+          <TextSection>
+            <div
+              style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}
+            >
+              <h1>Difftraka</h1>
+              <p>
+                Helping to drive financial inclusion for women in northern
+                Nigeria, by creating digital financial records for their
+                traditional form of savings,borrowing and contribution(Adashe).
+              </p>
+            </div>
+            <NavLink
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/difftraka"
+            >
+              <Button
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                hover={hover}
+              >
+                <span>VIEW CASE STUDY</span>
+                {hover ? (
+                  <img src={NextIcon} alt="" />
+                ) : (
+                  <img src={ArrowLeft} alt="" />
+                )}
+              </Button>
+            </NavLink>
+          </TextSection>
+          <IncentiveMockupWrapper>
+            <img src={AdasheMockup} alt="" />
+          </IncentiveMockupWrapper>
+        </Work>
+
+        <Work>
+          <BtcMockupWrapper>
+            <img src={IncentiveMockup} alt="" />
+          </BtcMockupWrapper>
+          <TextSection>
+            <div
+              style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}
+            >
+              <h1>INCENTIVE</h1>
+              <p>
+                Teaching children financial responsibilty by making them do
+                tasks to earn rewards(points) and also save towards goals.
+              </p>
+            </div>
+            <NavLink
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/incentive"
+            >
+              <Button
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                hover={hover}
+              >
+                <span>VIEW CASE STUDY</span>
+                {hover ? (
+                  <img src={NextIcon} alt="" />
+                ) : (
+                  <img src={ArrowLeft} alt="" />
+                )}
+              </Button>
+            </NavLink>
+          </TextSection>
+        </Work>
+        <Work>
+          <TextSection>
+            <div
+              style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}
+            >
+              <h1>Gona</h1>
+              <p>
+                A desktop solution for a farm manager to see sales records,
+                payment records,view profits summary and generally have detailed
+                overview into how their business is doing. .
+              </p>
+            </div>
+            <NavLink
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/incentive"
+            >
+              <Button
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                hover={hover}
+              >
+                <span>VIEW CASE STUDY</span>
+                {hover ? (
+                  <img src={NextIcon} alt="" />
+                ) : (
+                  <img src={ArrowLeft} alt="" />
+                )}
+              </Button>
+            </NavLink>
+          </TextSection>
+          <GonaMockUpWrapper>
+            <img src={GonaMockup} alt="" />
+          </GonaMockUpWrapper>
+        </Work>
+
+        {/* <TarkinWork>
           <TextSection>
             <div
               style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}
@@ -82,11 +189,11 @@ const Works = () => {
           <MockupWrapper>
             <img src={TarkinMockup} alt="" />
           </MockupWrapper>
-        </TarkinWork>
+        </TarkinWork> */}
         <TrakaWork>
-          <TrakaWrapper>
+          <BtcMockupWrapper>
             <img src={TrakaMockup} alt="" />
-          </TrakaWrapper>
+          </BtcMockupWrapper>
           <TextSection>
             <div
               style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}
@@ -140,12 +247,14 @@ const Heading2 = styled.h1`
 const WorksWrapper = styled.div``;
 const Work = styled.div`
   position: relative;
-  margin-top: 48px;
+  margin-top: 100px;
   align-items: center;
   display: flex;
   /* height: 700px; */
   width: 100%;
+  height: 100vh;
   gap: 32px;
+  overflow: hidden;
   @media (max-width: 550px) {
     flex-direction: column;
     padding-left: 32px;
@@ -167,7 +276,7 @@ const MockupWrapper = styled.div`
   /* position: relative; */
   align-self: center;
   & img {
-    width: 800px;
+    width: 600px;
     @media (max-width: 550px) {
       /* position: absolute;
       right: 64px; */
@@ -175,6 +284,27 @@ const MockupWrapper = styled.div`
     }
   }
 `;
+const IncentiveMockupWrapper = styled.div`
+  position: relative;
+  right: -300px;
+  top: 112px;
+  & img {
+    width: 600px;
+    @media (max-width: 550px) {
+      /* position: absolute;
+      right: 64px; */
+      /* width: 500px; */
+    }
+  }
+`;
+const GonaMockUpWrapper = styled(IncentiveMockupWrapper)`
+  top: 30px;
+  right: -200px;
+`;
+const BtcMockupWrapper = styled(IncentiveMockupWrapper)`
+  left: -100px;
+`;
+
 const TrakaWrapper = styled.div``;
 const TrakaWork = styled(Work)`
   padding: 72px;
@@ -191,6 +321,7 @@ const TextSection = styled.div`
   flex-direction: column;
   gap: 64px;
   position: relative;
+  left: 100px;
   /* top: 120px; */
   @media (max-width: 550px) {
     width: 330px;
@@ -217,7 +348,7 @@ const TextSection = styled.div`
   }
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   display: flex;
   gap: 8px;
   height: 51px;
@@ -235,7 +366,7 @@ const Button = styled.button`
     font-weight: 500;
   }
 `;
-const NavLink = styled(Link)`
+export const NavLink = styled(Link)`
   & :hover {
     background: #b8c2a9;
     color: #012e20;

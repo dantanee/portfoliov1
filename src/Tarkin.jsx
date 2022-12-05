@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import styled from 'styled-components';
 import TarkinBackground from './assets/Tarkin-homepage.svg';
 import TarkinHero from './assets/tarkinhero.svg';
@@ -13,14 +13,19 @@ import StyleGuide from './assets/styleguidetarkin.svg';
 import LandingPage from './assets/tarkinlanding.png';
 import AboutUs from './assets/Aboutus.png';
 import MobileView from './assets/mobile.png';
-import NextIcon from './assets/next.svg';
+import NextIcon from './assets/arrow-right-black.svg';
 import PrevIcon from './assets/previous.svg';
 import Congrats from './assets/congrats.png';
 import Leaf6 from './assets/leaf6.svg';
 import Completed from './assets/completed.svg';
+import NextUp from './assets/arrow-right-black-slanted.svg';
+import PreviousUp from './assets/arrow-left-white.svg';
+import PreviousIcon from './assets/arrow-left-black.svg';
 import { Link } from 'react-router-dom';
 
 const TarkinCaseStudy = () => {
+  const [hover, setHover] = useState(false);
+  const [prevHover, setPrevHover] = useState(false);
   return (
     <Wrapper>
       <AboveFold>
@@ -161,28 +166,13 @@ const TarkinCaseStudy = () => {
               approach.
             </Text>
           </div>
-          <div
+          {/* <div
             style={{
               display: 'flex',
               justifyContent: 'space-between',
             }}
           >
-            <Next>
-              <Link
-                style={{
-                  textDecoration: 'none',
-                  fontFamily: 'FreightText',
-                  fontSize: '20px',
-                  fontWeight: '800',
-                  color: '#121212',
-                  zIndex: '10',
-                }}
-                to="/cowtraka"
-              >
-                Next Project{' '}
-              </Link>{' '}
-              <img src={NextIcon} />
-            </Next>
+           
             <Previous>
               <img src={PrevIcon} />
               <Link
@@ -198,6 +188,46 @@ const TarkinCaseStudy = () => {
               >
                 Previous Project{' '}
               </Link>{' '}
+            </Previous>
+          </div> */}
+          <div style={{ display: 'flex' }}>
+            <Next
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/cowtraka"
+            >
+              <Button
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <span>NEXT PROJECT</span>
+                {hover ? (
+                  //
+                  // ) : (
+                  //
+                  <img src={NextUp} alt="" />
+                ) : (
+                  <img src={NextIcon} alt="" />
+                )}
+              </Button>
+            </Next>
+            <Previous
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/incentive"
+            >
+              <Button
+                onMouseEnter={() => setPrevHover(true)}
+                onMouseLeave={() => setPrevHover(false)}
+              >
+                {hover ? (
+                  //
+                  // ) : (
+                  //
+                  <img src={PreviousUp} alt="" />
+                ) : (
+                  <img src={PreviousIcon} alt="" />
+                )}
+                <span>PREVIOUS PROJECT</span>
+              </Button>
             </Previous>
           </div>
         </ContentWrapper>
@@ -283,19 +313,63 @@ const Ending = styled.div`
   position: relative;
   padding: 128px 200px;
 `;
-const Next = styled.span`
-  display: flex;
-  position: absolute;
-  bottom: -70px;
-  right: 10%;
-  gap: 16px;
-  & a {
-    font-family: 'FreightText';
-    font-size: 20px;
-    font-weight: bold;
+// const Next = styled.span`
+//   display: flex;
+//   position: absolute;
+//   bottom: -70px;
+//   right: 10%;
+//   gap: 16px;
+
+//   & a {
+//     font-size: 20px;
+//     font-weight: 400;
+//     text-transform: uppercase;
+//   }
+// `;
+const LinkImg = styled.div`
+  &:hover {
+    color: white;
   }
 `;
-const Previous = styled(Next)`
-  left: 10%;
+
+const Button = styled.button`
+  display: flex;
+  gap: 8px;
+  height: 51px;
+  width: 258px;
+  color: #121212;
+  font-family: 'DIN2014';
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #121212;
+
+  & span {
+    font-size: 20px;
+    font-weight: 500;
+  }
 `;
+const Next = styled(Link)`
+  align-self: flex-end;
+  position: absolute;
+  right: 10%;
+  top: 510px;
+  & :hover {
+    background: #121212;
+    color: #ffffff;
+  }
+`;
+
+const Previous = styled(Link)`
+  align-self: flex-start;
+  position: absolute;
+  left: 15%;
+  top: 510px;
+  & :hover {
+    background: #121212;
+    color: #ffffff;
+  }
+`;
+
 export default TarkinCaseStudy;

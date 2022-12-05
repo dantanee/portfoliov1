@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import styled from 'styled-components';
 import TrakaBackground from './assets/cowtraka.svg';
 import TrakaHero from './assets/trakahero.svg';
@@ -16,9 +16,12 @@ import ToLocation from './assets/tolacation.png';
 import NextIcon from './assets/next.svg';
 import PrevIcon from './assets/previous.svg';
 import Outcomes from './assets/outcome.png';
+import PreviousUp from './assets/arrow-left-white.svg';
+import PreviousIcon from './assets/arrow-left-black.svg';
 import { Link } from 'react-router-dom';
 
 const TrakaCaseStudy = () => {
+  const [hover, setHover] = useState(false);
   return (
     <Wrapper>
       <AboveFold>
@@ -197,7 +200,7 @@ const TrakaCaseStudy = () => {
               with me.
             </Text>
           </div>
-          <div
+          {/* <div
             style={{
               display: 'flex',
               justifyContent: 'space-between',
@@ -219,7 +222,26 @@ const TrakaCaseStudy = () => {
                 Previous Project{' '}
               </Link>{' '}
             </Previous>
-          </div>
+          </div> */}
+          <Previous
+            style={{ textDecoration: 'none', zIndex: '10' }}
+            to="/tarkin"
+          >
+            <Button
+              onMouseEnter={() => setPrevHover(true)}
+              onMouseLeave={() => setPrevHover(false)}
+            >
+              {hover ? (
+                //
+                // ) : (
+                //
+                <img src={PreviousUp} alt="" />
+              ) : (
+                <img src={PreviousIcon} alt="" />
+              )}
+              <span>PREVIOUS PROJECT</span>
+            </Button>
+          </Previous>
         </ContentWrapper>
       </TextSection>
     </Wrapper>
@@ -296,19 +318,47 @@ const Screen = styled.img`
   margin-left: -38px;
   /* box-shadow: 0px 6px 52px #cacbcb; */
 `;
-const Next = styled.span`
+// const Next = styled.span`
+//   display: flex;
+//   position: absolute;
+//   bottom: -70px;
+//   right: 10%;
+//   gap: 16px;
+//   & a {
+//     font-family: 'FreightText';
+//     font-size: 20px;
+//     font-weight: bold;
+//   }
+// `;
+// const Previous = styled(Next)`
+//   left: 10%;
+// `;
+const Button = styled.button`
   display: flex;
-  position: absolute;
-  bottom: -70px;
-  right: 10%;
-  gap: 16px;
-  & a {
-    font-family: 'FreightText';
+  gap: 8px;
+  height: 51px;
+  width: 258px;
+  color: #121212;
+  font-family: 'DIN2014';
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #121212;
+
+  & span {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
   }
 `;
-const Previous = styled(Next)`
-  left: 10%;
+const Previous = styled(Link)`
+  align-self: flex-start;
+  position: absolute;
+  left: 15%;
+  top: 490px;
+  & :hover {
+    background: #121212;
+    color: #ffffff;
+  }
 `;
 export default TrakaCaseStudy;
