@@ -3,13 +3,16 @@ import styled from 'styled-components';
 import WhatsApp from './assets/WhatsApp.svg';
 import EnvelopeClosed from './assets/Envelope Closed.svg';
 import LinkedIn from './assets/Linkedin.svg';
+import { AnimatedSpan } from './Hero';
 
 const Footer = () => {
   return (
     <Wrapper>
       <TextSection>
         <p>Got a project?</p>
-        <Heading1>LET'S TALK</Heading1>
+        <Heading1>
+          <AnimatedSpan>LET'S TALK</AnimatedSpan>
+        </Heading1>
       </TextSection>
       <ContactSection>
         <Info>

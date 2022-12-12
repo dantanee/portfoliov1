@@ -12,8 +12,10 @@ import Lender2 from './assets/Lender2.png';
 import NextIcon from './assets/next.svg';
 import ArrowLeft from './assets/left-arrow.svg';
 import { Link } from 'react-router-dom';
+import PreviousUp from './assets/arrow-left-black.svg';
+import PreviousIcon from './assets/arrow-left-black.svg';
+
 const DiffCaseStudy = () => {
-  const [hover, setHover] = useState(false);
   return (
     <Wrapper>
       <AboveFold>
@@ -215,7 +217,7 @@ const DiffCaseStudy = () => {
           <Image
             src={Adashe2}
             alt=""
-            style={{ transform: 'translateX(-30px)' }}
+            style={{ transform: 'translateX(-20px)' }}
           />
         </div>
       </Section>
@@ -296,25 +298,31 @@ const DiffCaseStudy = () => {
           </li>
         </ListWrapper>
       </Section>
-      <Section style={{ display: 'flex' }}>
+      <Section
+        style={{ display: 'flex', justifyContent: 'center', gap: '400px' }}
+      >
+        <NavLink
+          style={{
+            textDecoration: 'none',
+            zIndex: '10',
+            transform: 'translateX(-40px)',
+          }}
+          to="/easybit"
+        >
+          <Button>
+            <img src={PreviousIcon} alt="" />
+
+            <span>PREVIOUS PROJECT</span>
+          </Button>
+        </NavLink>
         <NavLink
           style={{ textDecoration: 'none', zIndex: '10' }}
           to="/incentive"
         >
-          <Button
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            hover={hover}
-          >
+          <Button>
             <span>NEXT PROJECT</span>
-            {hover ? (
-              //
-              // ) : (
-              //
-              <img src={ArrowLeft} alt="" />
-            ) : (
-              <img src={NextIcon} alt="" />
-            )}
+
+            <img src={NextIcon} alt="" />
           </Button>
         </NavLink>
       </Section>
@@ -382,7 +390,7 @@ const Text = styled.p`
   }
 `;
 const Section = styled.section`
-  padding: 100px 200px;
+  padding: 50px 200px;
   /* display: flex;
   gap: 72px;
   align-items: center; */
@@ -422,7 +430,7 @@ const Button = styled.button`
   }
 `;
 const NavLink = styled(Link)`
-  transform: translateX(800px);
+  transform: translateX(120px);
   /* top: 450px; */
   & :hover {
     background: #121212;

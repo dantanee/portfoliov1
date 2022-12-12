@@ -13,6 +13,8 @@ import TarkinCaseStudy from './Tarkin';
 import Home from './Home';
 import About from './About';
 import DiffCaseStudy from './Difftraka';
+import EasyBitCaseStudy from './Easybit';
+import TestCase from './SomeCase';
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
         <Route path="/incentive" element={<IncentiveCaseStudy />} />
         <Route path="/cowtraka" element={<TrakaCaseStudy />} />
         <Route path="/tarkin" element={<TarkinCaseStudy />} />
+        <Route path="/easybit" element={<EasyBitCaseStudy />} />
         <Route path="/about" element={<About />} />
+        <Route path="/testcase" element={<TestCase />} />
       </Routes>
     </div>
   );

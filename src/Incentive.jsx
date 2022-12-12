@@ -26,6 +26,7 @@ import CreateGoal from './assets/creategoal.png';
 import Transfer from './assets/transfers.png';
 import NextIcon from './assets/next.svg';
 import ArrowLeft from './assets/left-arrow.svg';
+import PreviousIcon from './assets/arrow-left-black.svg';
 import { Link } from 'react-router-dom';
 
 const IncentiveCaseStudy = () => {
@@ -273,7 +274,7 @@ const IncentiveCaseStudy = () => {
           </Link>{' '}
           <img src={NextIcon} />
         </Next> */}
-        <NavLink style={{ textDecoration: 'none', zIndex: '10' }} to="/tarkin">
+        {/* <NavLink style={{ textDecoration: 'none', zIndex: '10' }} to="/tarkin">
           <Button
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
@@ -289,7 +290,40 @@ const IncentiveCaseStudy = () => {
               <img src={NextIcon} alt="" />
             )}
           </Button>
-        </NavLink>
+        </NavLink> */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '400px',
+            marginTop: '96px',
+          }}
+        >
+          <NavLink
+            style={{
+              textDecoration: 'none',
+              zIndex: '10',
+              transform: 'translateX(-40px)',
+            }}
+            to="/difftraka"
+          >
+            <Button>
+              <img src={PreviousIcon} alt="" />
+
+              <span>PREVIOUS PROJECT</span>
+            </Button>
+          </NavLink>
+          <NavLink
+            style={{ textDecoration: 'none', zIndex: '10' }}
+            to="/cowtrack"
+          >
+            <Button>
+              <span>NEXT PROJECT</span>
+
+              <img src={NextIcon} alt="" />
+            </Button>
+          </NavLink>
+        </div>
       </Ending>
     </Wrapper>
   );
@@ -376,11 +410,19 @@ export const Button = styled.button`
     font-weight: 500;
   }
 `;
-export const NavLink = styled(Link)`
-  align-self: flex-end;
-  position: absolute;
-  right: 10%;
-  top: 450px;
+// export const NavLink = styled(Link)`
+//   align-self: flex-end;
+//   position: absolute;
+//   right: 10%;
+//   top: 450px;
+//   & :hover {
+//     background: #121212;
+//     color: #ffffff;
+//   }
+// `;
+const NavLink = styled(Link)`
+  transform: translateX(120px);
+  /* top: 450px; */
   & :hover {
     background: #121212;
     color: #ffffff;

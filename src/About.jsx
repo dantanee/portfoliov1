@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Yasir from './assets/geepic.png';
 import ArrowLeft from './assets/left-arrow.svg';
 import NextIcon from './assets/nexticon.svg';
+import ReactPlayer from 'react-player';
 
 const About = () => {
   const [hover, setHover] = useState(false);

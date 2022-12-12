@@ -13,6 +13,7 @@ import GonaMockup from './assets/gonamock.svg';
 import { Link } from 'react-router-dom';
 
 import { useState } from 'react';
+import ParallaxElement from './Parallax';
 
 const Works = () => {
   const [hover, setHover] = useState(false);
@@ -20,37 +21,45 @@ const Works = () => {
     <Wrapper>
       <WorksWrapper>
         <Heading2>SELECTED WORKS</Heading2>
+
         <Work>
           <BtcMockupWrapper>
             <img src={BtcMockup} alt="" />
           </BtcMockupWrapper>
           <TextSection style={{ right: '-10px' }}>
             <div
-              style={{ display: 'flex', gap: '16px', flexDirection: 'column' }}
+              style={{
+                display: 'flex',
+                gap: '16px',
+                flexDirection: 'column',
+              }}
             >
-              <h1>BitAdopt</h1>
+              <h1>Easybit</h1>
               <p>
                 Encouraging bitcoin adoption in Africa by allowing individuals
                 easily gift bitcoin and also create campaigns(giveaway) on
                 social media and reward winners in btc(SATS).
               </p>
             </div>
-            <NavLink style={{ textDecoration: 'none', zIndex: '10' }} to="/">
+            <NavLink
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/easybit"
+            >
               <Button
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                style={{ border: 'none' }}
               >
-                <span>CASE STUDY COMING SOON</span>
-                {/* {hover ? (
+                <span>VIEW CASE STUDY</span>
+                {hover ? (
                   <img src={NextIcon} alt="" />
                 ) : (
                   <img src={ArrowLeft} alt="" />
-                )} */}
+                )}
               </Button>
             </NavLink>
           </TextSection>
         </Work>
+
         <Work>
           <TextSection>
             <div
