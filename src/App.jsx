@@ -15,20 +15,23 @@ import About from './About';
 import DiffCaseStudy from './Difftraka';
 import EasyBitCaseStudy from './Easybit';
 import TestCase from './SomeCase';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/difftraka" element={<DiffCaseStudy />} />
-        <Route path="/incentive" element={<IncentiveCaseStudy />} />
-        <Route path="/cowtraka" element={<TrakaCaseStudy />} />
-        <Route path="/tarkin" element={<TarkinCaseStudy />} />
-        <Route path="/easybit" element={<EasyBitCaseStudy />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/testcase" element={<TestCase />} />
-      </Routes>
+      <ParallaxProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/difftraka" element={<DiffCaseStudy />} />
+          <Route path="/incentive" element={<IncentiveCaseStudy />} />
+          <Route path="/cowtraka" element={<TrakaCaseStudy />} />
+          <Route path="/tarkin" element={<TarkinCaseStudy />} />
+          <Route path="/easybit" element={<EasyBitCaseStudy />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/testcase" element={<TestCase />} />
+        </Routes>
+      </ParallaxProvider>
     </div>
   );
 }
