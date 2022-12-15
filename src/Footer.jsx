@@ -44,13 +44,16 @@ const TextSection = styled.div`
   margin-bottom: 32px;
 
   & p {
-    color: #b8c2a9;
+    /* color: #b8c2a9; */
+    color: #fffde4;
+    opacity: 0.7;
   }
 `;
 const Heading1 = styled.h1`
   font-size: 60px;
   font-weight: 700;
-  color: #b8c2a9;
+  /* color: #b8c2a9; */
+  color: #fffde4;
   @media (max-width: 550px) {
     font-size: 48px;
   }
@@ -70,7 +73,9 @@ const Info = styled.div`
   gap: 8px;
 `;
 const Span = styled.span`
-  color: #b8c2a9;
+  /* color: #b8c2a9; */
+  color: #fffde4;
+  opacity: 0.7;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 18px;
   @media (max-width: 550px) {

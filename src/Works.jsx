@@ -10,12 +10,11 @@ import NextIcon from './assets/nexticon.svg';
 import BtcMockup from './assets/BtcMockup.svg';
 import AdasheMockup from './assets/adashemockup.svg';
 import GonaMockup from './assets/gonamock.svg';
-import { Parallax } from 'react-scroll-parallax';
-import ScrollAnimation from 'react-animate-on-scroll';
+// import { Parallax } from 'react-scroll-parallax';
+// import ScrollAnimation from 'react-animate-on-scroll';
 import { Link } from 'react-router-dom';
 
 import { useState } from 'react';
-import ParallaxElement from './Parallax';
 
 const Works = () => {
   const [hover, setHover] = useState(false);
@@ -26,169 +25,152 @@ const Works = () => {
 
         <Work>
           <BtcMockupWrapper>
-            <ScrollAnimation animateIn="fadeInLeft">
-              <img src={BtcMockup} alt="" />
-            </ScrollAnimation>
+            <img src={BtcMockup} alt="" />
           </BtcMockupWrapper>
 
-          <ScrollAnimation animateIn="fadeIn">
-            <TextSection style={{ right: '-10px' }}>
-              <div
-                style={{
-                  display: 'flex',
-                  gap: '16px',
-                  flexDirection: 'column',
-                }}
+          <TextSection style={{ right: '-10px' }}>
+            <div
+              style={{
+                display: 'flex',
+                gap: '16px',
+                flexDirection: 'column',
+              }}
+            >
+              <h1>Easybit</h1>
+              <p>
+                Encouraging bitcoin adoption in Africa by allowing individuals
+                easily gift bitcoin and also create campaigns(giveaway) on
+                social media and reward winners in btc(SATS).
+              </p>
+            </div>
+            <NavLink
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/easybit"
+            >
+              <Button
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
               >
-                <h1>Easybit</h1>
-                <p>
-                  Encouraging bitcoin adoption in Africa by allowing individuals
-                  easily gift bitcoin and also create campaigns(giveaway) on
-                  social media and reward winners in btc(SATS).
-                </p>
-              </div>
-              <NavLink
-                style={{ textDecoration: 'none', zIndex: '10' }}
-                to="/easybit"
-              >
-                <Button
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                >
-                  <span>VIEW CASE STUDY</span>
-                  {hover ? (
-                    <img src={NextIcon} alt="" />
-                  ) : (
-                    <img src={ArrowLeft} alt="" />
-                  )}
-                </Button>
-              </NavLink>
-            </TextSection>
-          </ScrollAnimation>
+                <span>VIEW CASE STUDY</span>
+                {hover ? (
+                  <img src={NextIcon} alt="" />
+                ) : (
+                  <img src={ArrowLeft} alt="" />
+                )}
+              </Button>
+            </NavLink>
+          </TextSection>
         </Work>
 
         <Work>
-          <ScrollAnimation animateIn="fadeIn">
-            <TextSection>
-              <div
-                style={{
-                  display: 'flex',
-                  gap: '16px',
-                  flexDirection: 'column',
-                }}
+          <TextSection>
+            <div
+              style={{
+                display: 'flex',
+                gap: '16px',
+                flexDirection: 'column',
+              }}
+            >
+              <h1>Difftraka</h1>
+              <p>
+                Helping to drive financial inclusion for women in northern
+                Nigeria, by creating digital financial records for their
+                traditional form of savings,borrowing and contribution(Adashe).
+              </p>
+            </div>
+            <NavLink
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/difftraka"
+            >
+              <Button
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                hover={hover}
               >
-                <h1>Difftraka</h1>
-                <p>
-                  Helping to drive financial inclusion for women in northern
-                  Nigeria, by creating digital financial records for their
-                  traditional form of savings,borrowing and
-                  contribution(Adashe).
-                </p>
-              </div>
-              <NavLink
-                style={{ textDecoration: 'none', zIndex: '10' }}
-                to="/difftraka"
-              >
-                <Button
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                  hover={hover}
-                >
-                  <span>VIEW CASE STUDY</span>
-                  {hover ? (
-                    <img src={NextIcon} alt="" />
-                  ) : (
-                    <img src={ArrowLeft} alt="" />
-                  )}
-                </Button>
-              </NavLink>
-            </TextSection>
-          </ScrollAnimation>
+                <span>VIEW CASE STUDY</span>
+                {hover ? (
+                  <img src={NextIcon} alt="" />
+                ) : (
+                  <img src={ArrowLeft} alt="" />
+                )}
+              </Button>
+            </NavLink>
+          </TextSection>
 
-          <ScrollAnimation animateIn="fadeInRight">
-            <IncentiveMockupWrapper>
-              <img src={AdasheMockup} alt="" />
-            </IncentiveMockupWrapper>
-          </ScrollAnimation>
+          <IncentiveMockupWrapper>
+            <img src={AdasheMockup} alt="" />
+          </IncentiveMockupWrapper>
         </Work>
 
         <Work>
-          <ScrollAnimation animateIn="fadeInLeft">
-            <BtcMockupWrapper>
-              <img src={IncentiveMockup} alt="" />
-            </BtcMockupWrapper>
-          </ScrollAnimation>
+          <BtcMockupWrapper>
+            <img src={IncentiveMockup} alt="" />
+          </BtcMockupWrapper>
 
-          <ScrollAnimation animateIn="fadeIn">
-            <TextSection>
-              <div
-                style={{
-                  display: 'flex',
-                  gap: '16px',
-                  flexDirection: 'column',
-                }}
+          <TextSection>
+            <div
+              style={{
+                display: 'flex',
+                gap: '16px',
+                flexDirection: 'column',
+              }}
+            >
+              <h1>Incentive</h1>
+              <p>
+                Teaching children financial responsibilty by making them do
+                tasks to earn rewards(points) and also save towards goals.
+              </p>
+            </div>
+            <NavLink
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/incentive"
+            >
+              <Button
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                hover={hover}
               >
-                <h1>INCENTIVE</h1>
-                <p>
-                  Teaching children financial responsibilty by making them do
-                  tasks to earn rewards(points) and also save towards goals.
-                </p>
-              </div>
-              <NavLink
-                style={{ textDecoration: 'none', zIndex: '10' }}
-                to="/incentive"
-              >
-                <Button
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                  hover={hover}
-                >
-                  <span>VIEW CASE STUDY</span>
-                  {hover ? (
-                    <img src={NextIcon} alt="" />
-                  ) : (
-                    <img src={ArrowLeft} alt="" />
-                  )}
-                </Button>
-              </NavLink>
-            </TextSection>
-          </ScrollAnimation>
+                <span>VIEW CASE STUDY</span>
+                {hover ? (
+                  <img src={NextIcon} alt="" />
+                ) : (
+                  <img src={ArrowLeft} alt="" />
+                )}
+              </Button>
+            </NavLink>
+          </TextSection>
         </Work>
         <Work>
-          <ScrollAnimation animateIn="fadeIn">
-            <TextSection>
-              <div
-                style={{
-                  display: 'flex',
-                  gap: '16px',
-                  flexDirection: 'column',
-                }}
-              >
-                <h1>Gona</h1>
-                <p>
-                  A desktop solution for a farm manager to see sales records,
-                  payment records,view profits summary and generally have
-                  detailed overview into how their business is doing. .
-                </p>
-              </div>
-              <NavLink style={{ textDecoration: 'none', zIndex: '10' }} to="/">
-                <Button style={{ border: 'none', marginLeft: '-30px' }}>
-                  <span>CASE STUDY COMING SOON</span>
-                  {/* {hover ? (
+          <TextSection>
+            <div
+              style={{
+                display: 'flex',
+                gap: '16px',
+                flexDirection: 'column',
+              }}
+            >
+              <h1>Gona</h1>
+              <p>
+                A desktop solution for a farm manager to see sales records,
+                payment records,view profits summary and generally have detailed
+                overview into how their business is doing. .
+              </p>
+            </div>
+            <NavLink style={{ textDecoration: 'none', zIndex: '10' }} to="/">
+              <Button style={{ border: 'none', marginLeft: '-30px' }}>
+                <span>CASE STUDY COMING SOON</span>
+                {/* {hover ? (
                   <img src={NextIcon} alt="" />
                 ) : (
                   <img src={ArrowLeft} alt="" />
                 )} */}
-                </Button>
-              </NavLink>
-            </TextSection>
-          </ScrollAnimation>
+              </Button>
+            </NavLink>
+          </TextSection>
 
-          <ScrollAnimation animateIn="fadeInRight">
-            <GonaMockUpWrapper>
-              <img src={GonaMockup} alt="" />
-            </GonaMockUpWrapper>
-          </ScrollAnimation>
+          <GonaMockUpWrapper>
+            <img src={GonaMockup} alt="" />
+          </GonaMockUpWrapper>
         </Work>
 
         {/* <TarkinWork>
@@ -225,52 +207,48 @@ const Works = () => {
           </MockupWrapper>
         </TarkinWork> */}
         <TrakaWork>
-          <ScrollAnimation animateIn="fadeInLeft">
-            <TrakaMockupWrapper style={{ left: '-10px' }}>
-              <img src={TrakaMockup} alt="" />
-            </TrakaMockupWrapper>
-          </ScrollAnimation>
+          <TrakaMockupWrapper style={{ left: '-10px' }}>
+            <img src={TrakaMockup} alt="" />
+          </TrakaMockupWrapper>
 
-          <ScrollAnimation animateIn="fadeIn">
-            <TextSection
+          <TextSection
+            style={{
+              position: 'relative',
+              right: '100px',
+              transform: 'translateX(-100px)',
+            }}
+          >
+            <div
               style={{
-                position: 'relative',
-                right: '100px',
-                transform: 'translateX(-100px)',
+                display: 'flex',
+                gap: '16px',
+                flexDirection: 'column',
               }}
             >
-              <div
-                style={{
-                  display: 'flex',
-                  gap: '16px',
-                  flexDirection: 'column',
-                }}
+              <h1>Tracka</h1>
+              <p>
+                An app that allows headers track their cattle and also help them
+                locate grazing paths and waterside to feed and walk their
+                animals.
+              </p>
+            </div>
+            <NavLink
+              style={{ textDecoration: 'none', zIndex: '10' }}
+              to="/cowtraka"
+            >
+              <Button
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
               >
-                <h1>TRACKA</h1>
-                <p>
-                  An app that allows headers track their cattle and also help
-                  them locate grazing paths and waterside to feed and walk their
-                  animals.
-                </p>
-              </div>
-              <NavLink
-                style={{ textDecoration: 'none', zIndex: '10' }}
-                to="/cowtraka"
-              >
-                <Button
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                >
-                  <span>VIEW CASE STUDY</span>
-                  {hover ? (
-                    <img src={NextIcon} alt="" />
-                  ) : (
-                    <img src={ArrowLeft} alt="" />
-                  )}
-                </Button>
-              </NavLink>
-            </TextSection>
-          </ScrollAnimation>
+                <span>VIEW CASE STUDY</span>
+                {hover ? (
+                  <img src={NextIcon} alt="" />
+                ) : (
+                  <img src={ArrowLeft} alt="" />
+                )}
+              </Button>
+            </NavLink>
+          </TextSection>
         </TrakaWork>
       </WorksWrapper>
     </Wrapper>
@@ -281,10 +259,12 @@ const Wrapper = styled.div`
   padding-top: 64px;
 `;
 const Heading2 = styled.h1`
-  color: #b8c2a9;
+  /* color: #b8c2a9; */
+  color: #fffde4;
   display: flex;
   justify-content: center;
-  font-family: 'Chakra Petch', sans-serif;
+  /* font-family: 'Chakra Petch', sans-serif; */
+  letter-spacing: -3px;
   font-size: 60px;
   font-weight: 700;
   @media (max-width: 550px) {
@@ -356,7 +336,7 @@ const BtcMockupWrapper = styled(IncentiveMockupWrapper)`
 const TrakaMockupWrapper = styled(IncentiveMockupWrapper)`
   & img {
     position: relative;
-    left: -100px;
+    left: -150px;
   }
 `;
 const TrakaWrapper = styled.div``;
@@ -385,8 +365,9 @@ const TextSection = styled.div`
   & h1 {
     font-size: 48px;
     font-weight: 600;
-    font-family: 'Chakra Petch', sans-serif;
-    color: #b8c2a9;
+    /* font-family: 'Chakra Petch', sans-serif; */
+    /* color: #b8c2a9; */
+    color: #fffde4;
     @media (max-width: 550px) {
       font-size: 32px;
       align-self: center;
@@ -394,7 +375,9 @@ const TextSection = styled.div`
   }
   & p {
     font-size: 16px;
-    color: #b8c2a9;
+    /* color: #b8c2a9; */
+    color: #fffde4;
+    opacity: 0.7;
     font-weight: 400;
     @media (max-width: 550px) {
       text-align: center;
@@ -407,7 +390,8 @@ export const Button = styled.button`
   gap: 8px;
   height: 51px;
   width: 258px;
-  color: #b8c2a9;
+  /* color: #b8c2a9; */
+  color: #fffde4;
   font-family: 'Chakra Petch';
   cursor: pointer;
   justify-content: center;

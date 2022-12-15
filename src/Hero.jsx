@@ -141,7 +141,7 @@
 
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-
+import HeroBg from './assets/herobg.svg';
 import Arrowdown from './assets/arrow-down-filled.svg';
 
 const AnimatedText = (props) => (
@@ -196,7 +196,8 @@ const Text = styled.p`
   font-weight: 700;
   font-size: 60px;
   margin-top: 48px;
-  color: #b8c2a9;
+  /* color: #b8c2a9; */
+  color: #fffde4;
   max-width: 990px;
   letter-spacing: -3px;
   line-height: 80px;
@@ -220,7 +221,9 @@ const Scroll = styled.div`
     font-size: 18px;
     text-decoration: none;
     font-weight: 600;
-    color: #9e8d8d;
+    /* color: #9e8d8d; */
+    color: #fffde4;
+    opacity: 0.8;
   }
 `;
 const AnimateGradient = keyframes`
@@ -237,7 +240,7 @@ const AnimateGradient = keyframes`
 
 export const AnimatedSpan = styled.span`
   /* background: linear-gradient(to right, #b8c2a9, #f3e96a, #8be78b); */
-  background: linear-gradient(to right, #ebb21c, #05eba2, #ca1ceb);
+  background: linear-gradient(to right, #ebb21c, #05eba2, #fffde4);
   animation: ${AnimateGradient} 8s linear infinite;
   background-size: 300%;
   background-clip: text;

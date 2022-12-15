@@ -5,6 +5,7 @@ import Header from './Header';
 import Tarkin from './Tarkin';
 import Footer from './Footer';
 import Works from './Works';
+import HeroBg from './assets/herobg.png';
 import HomeHeader from './HomeHeader';
 
 const Home = () => {
@@ -45,13 +46,16 @@ const FooterWrapper = styled.div`
 const AboveFold = styled.div`
   display: flex;
   height: 650px;
-  background-image: linear-gradient(180deg, #012e20 38%, #010101 100%, #010101);
+  /* background-image: linear-gradient(180deg, #012e20 38%, #010101 100%, #010101); */
+  background-image: url(${HeroBg});
+  background-size: cover;
   @media (max-width: 550px) {
     height: 400px;
   }
 `;
 const Below = styled.div`
-  background-image: linear-gradient(#010101 1%, #092419 80%, #010101);
+  /* background-image: linear-gradient(#010101 1%, #092419 80%, #010101); */
+  background-color: #14262a;
 `;
 const WorksWrapper = styled.div``;
 const HeaderWrapper = styled.div`
