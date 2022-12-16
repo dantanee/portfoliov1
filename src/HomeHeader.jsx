@@ -19,13 +19,13 @@ const Header = () => {
         <img src={logo} alt="logo" />
       </Link>
       <NavItems>
-        <Link style={{ textDecoration: 'none' }}>
+        <Link style={{ textDecoration: 'none' }} to="/">
           <NavItem>works</NavItem>
         </Link>
         <Link style={{ textDecoration: 'none' }} to="/about">
           <NavItem>about</NavItem>
         </Link>
-        <Link style={{ textDecoration: 'none' }}>
+        <Link style={{ textDecoration: 'none' }} to="/">
           <NavItem>contact</NavItem>
         </Link>
       </NavItems>

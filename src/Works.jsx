@@ -157,7 +157,9 @@ const Works = () => {
               </p>
             </div>
             <NavLink style={{ textDecoration: 'none', zIndex: '10' }} to="/">
-              <Button style={{ border: 'none', marginLeft: '-30px' }}>
+              <Button
+                style={{ border: 'none', marginLeft: '-30px', width: '350px' }}
+              >
                 <span>CASE STUDY COMING SOON</span>
                 {/* {hover ? (
                   <img src={NextIcon} alt="" />
@@ -418,7 +420,7 @@ const TextSection = styled.div`
     color: #e8e8e8;
     font-family: 'Axiforma', sans-serif;
     opacity: 0.7;
-    line-height: 150%;
+    line-height: 1.8;
     font-weight: 500;
     @media (max-width: 550px) {
       text-align: center;

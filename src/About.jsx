@@ -1,11 +1,12 @@
 import { React, useState } from 'react';
 import styled from 'styled-components';
-import Header from './Header';
+// import Header from './Header';
 import { Link } from 'react-router-dom';
-import Yasir from './assets/geepic.png';
+import Yasir from './assets/gee.png';
 import ArrowLeft from './assets/left-arrow.svg';
 import NextIcon from './assets/nexticon.svg';
 import ReactPlayer from 'react-player';
+import Header from './HomeHeader';
 
 const About = () => {
   const [hover, setHover] = useState(false);
@@ -18,9 +19,10 @@ const About = () => {
           gap: '80px',
           alignItems: 'center',
           marginTop: '64px',
+          height: '500px',
         }}
       >
-        <img src={Yasir} alt="yasir picture" />
+        <img src={Yasir} alt="yasir picture" style={{ height: '90%' }} />
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
           <Text>
             {' '}
@@ -54,41 +56,43 @@ const About = () => {
 };
 
 const Wrapper = styled.div`
-  padding: 0 144px;
+  padding: 0 72px;
   /* background-image: linear-gradient(180deg, #012e20 38%, #010101 100%, #010101); */
-  background-color: #14262a;
+  background-color: #010001;
 `;
 const Button = styled.button`
   display: flex;
   gap: 8px;
   height: 51px;
-  width: 258px;
-  background: ;
-  color: #b8c2a9;
-  font-family: 'Chakra Petch';
-  cursor:pointer;
+  width: 300px;
+  /* background: ; */
+  color: #e8e8e8;
+  font-family: 'Monument', sans-serif;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   background: transparent;
-  border: 1px solid #b8c2a9;
+  border: 1px solid #e8e8e8;
+  text-transform: lowercase;
 
   & span {
     font-size: 16px;
     font-weight: 500;
-    text-
   }
   &:hover {
-    background: #b8c2a9;
-    color: #012e20;
+    background: #e8e8e8;
+    color: #010001;
   }
 `;
 const Text = styled.p`
-  font-family: 'FreightText', sans-serif;
-  font-size: 20px;
+  font-family: 'Axiforma', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
   font-weight: 400;
   max-width: 800px;
   margin-top: 24px;
-  color: #b8c2a9;
+  color: #e8e8e8;
+  opacity: 0.8;
 `;
 const HeaderWrapper = styled.div`
   position: fixed;
