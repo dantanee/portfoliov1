@@ -141,7 +141,7 @@
 
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import HeroBg from './assets/herobg.svg';
+import Blackblob from './assets/bloblack.png';
 import Arrowdown from './assets/arrow-down-filled.svg';
 
 const AnimatedText = (props) => (
@@ -167,10 +167,10 @@ const Hero = () => {
         {/* <span style={{ fontSize: '18px', fontWeight: '600', color: '#9e8d8d' }}>
           Hello, I'm Yasir
         </span> */}
-
+        {/* <Blob src={Blackblob} alt="" /> */}
+        {/* <Text>Creating innovative solutions for real-world problems.</Text> */}
         <Text>
-          Creating <AnimatedSpan> innovative solutions</AnimatedSpan> for
-          real-world problems.
+          I create <br /> innovative solutions for real-world problems.
         </Text>
       </Wrapper>
       <Scroll>
@@ -183,25 +183,35 @@ const Hero = () => {
 
 const MainWrapper = styled.div`
   padding: 0 128px;
+  position: relative;
   @media (max-width: 550px) {
     padding: 0 32px;
   }
+`;
+const Blob = styled.img`
+  position: absolute;
+  top: 30%;
+  right: 5%;
 `;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
 const TextSection = styled.div``;
-const Text = styled.p`
-  font-weight: 700;
-  font-size: 60px;
+const Text = styled.h1`
+  font-weight: 800;
+  font-size: 64px;
   margin-top: 48px;
   /* color: #b8c2a9; */
-  color: #fffde4;
-  max-width: 990px;
-  letter-spacing: -3px;
+  /* color: #fffde4; */
+  /* color: #667f6a; */
+  color: #e8e8e8;
+
+  max-width: 1200px;
+  /* letter-spacing: -2px; */
   line-height: 80px;
-  transform: translateY(-40px);
+  transform: translateY(-80px);
+  font-family: 'Monument', sans-serif;
 
   @media (max-width: 550px) {
     font-size: 32px;
@@ -214,16 +224,17 @@ const Scroll = styled.div`
   display: flex;
   margin-top: 64px;
   gap: 8px;
+  transform: translateY(-70px);
   @media (max-width: 550px) {
     margin-top: 24px;
   }
   & a {
-    font-size: 18px;
+    font-size: 14px;
     text-decoration: none;
-    font-weight: 600;
-    /* color: #9e8d8d; */
-    color: #fffde4;
-    opacity: 0.8;
+    font-weight: 500;
+    font-family: 'Monument', sans-serif;
+    color: #e8e8e8;
+    opacity: 0.9;
   }
 `;
 const AnimateGradient = keyframes`

@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: 'Axiforma';
+  src: url(./fonts/Axiforma-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'DIN2014';
   src: url(./fonts/DIN2014-Bold.woff) format('woff2');
   font-weight: 600;
@@ -40,6 +47,24 @@
   font-family: 'ProximaSoft';
   src: url(./fonts/ProximaSoft-Black.woff2) format('woff2');
   font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Eiko';
+  src: url(./fonts/PPEiko-Heavy.otf);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Monument';
+  src: url(./fonts/PPMonumentExtended-Black.otf);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Monument';
+  src: url(./fonts/PPMonumentExtended-Regular.otf);
+  font-weight: 500;
   font-style: normal;
 }
 

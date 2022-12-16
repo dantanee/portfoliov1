@@ -211,29 +211,28 @@ const Works = () => {
             <img src={TrakaMockup} alt="" />
           </TrakaMockupWrapper>
 
-          <TextSection
-            style={{
-              position: 'relative',
-              right: '100px',
-              transform: 'translateX(-100px)',
-            }}
-          >
+          <TextSection>
             <div
               style={{
                 display: 'flex',
                 gap: '16px',
                 flexDirection: 'column',
+                transform: 'translateX(-100px)',
               }}
             >
               <h1>Tracka</h1>
               <p>
-                An app that allows headers track their cattle and also help them
+                An app that allows herders track their cattle and also help them
                 locate grazing paths and waterside to feed and walk their
                 animals.
               </p>
             </div>
             <NavLink
-              style={{ textDecoration: 'none', zIndex: '10' }}
+              style={{
+                textDecoration: 'none',
+                zIndex: '10',
+                transform: 'translateX(-100px)',
+              }}
               to="/cowtraka"
             >
               <Button
@@ -249,6 +248,46 @@ const Works = () => {
               </Button>
             </NavLink>
           </TextSection>
+          {/* <TextSection
+            style={{
+              position: 'relative',
+              right: '100px',
+              transform: 'translateX(-100px)',
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                gap: '16px',
+                flexDirection: 'column',
+              }}
+            >
+              <h1>Tracka</h1>
+              <p>
+                An app that allows herders track their cattle and also help them
+                locate grazing paths and waterside to feed and walk their
+                animals.
+              </p>
+            </div>
+          
+            <NavLink
+              style={{ textDecoration: 'none', zIndex: '100' }}
+              to="/incentive"
+            >
+              <Button
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                hover={hover}
+              >
+                <span>VIEW CASE STUDY</span>
+                {hover ? (
+                  <img src={NextIcon} alt="" />
+                ) : (
+                  <img src={ArrowLeft} alt="" />
+                )}
+              </Button>
+            </NavLink>
+          </TextSection> */}
         </TrakaWork>
       </WorksWrapper>
     </Wrapper>
@@ -260,11 +299,11 @@ const Wrapper = styled.div`
 `;
 const Heading2 = styled.h1`
   /* color: #b8c2a9; */
-  color: #fffde4;
+  color: #e8e8e8;
   display: flex;
   justify-content: center;
-  /* font-family: 'Chakra Petch', sans-serif; */
-  letter-spacing: -3px;
+  font-family: 'Monument', sans-serif;
+  /* letter-spacing: -3px; */
   font-size: 60px;
   font-weight: 700;
   @media (max-width: 550px) {
@@ -365,9 +404,9 @@ const TextSection = styled.div`
   & h1 {
     font-size: 48px;
     font-weight: 600;
-    /* font-family: 'Chakra Petch', sans-serif; */
+    font-family: 'Monument', sans-serif;
     /* color: #b8c2a9; */
-    color: #fffde4;
+    color: #e8e8e8;
     @media (max-width: 550px) {
       font-size: 32px;
       align-self: center;
@@ -376,9 +415,11 @@ const TextSection = styled.div`
   & p {
     font-size: 16px;
     /* color: #b8c2a9; */
-    color: #fffde4;
+    color: #e8e8e8;
+    font-family: 'Axiforma', sans-serif;
     opacity: 0.7;
-    font-weight: 400;
+    line-height: 150%;
+    font-weight: 500;
     @media (max-width: 550px) {
       text-align: center;
     }
@@ -389,15 +430,17 @@ export const Button = styled.button`
   display: flex;
   gap: 8px;
   height: 51px;
-  width: 258px;
+  width: 300px;
+  padding: 16px 8px;
   /* color: #b8c2a9; */
-  color: #fffde4;
-  font-family: 'Chakra Petch';
+  color: #e8e8e8;
+  font-family: 'Monument', sans-serif;
   cursor: pointer;
   justify-content: center;
   align-items: center;
   background: transparent;
-  border: 1px solid #b8c2a9;
+  border: 1px solid #e8e8e8;
+  text-transform: lowercase;
 
   & span {
     font-size: 16px;
@@ -405,9 +448,10 @@ export const Button = styled.button`
   }
 `;
 export const NavLink = styled(Link)`
+  width: 300px;
   & :hover {
-    background: #b8c2a9;
-    color: #012e20;
+    background: #e8e8e8;
+    color: #010001;
   }
 `;
 // const AnimatedDiv = styled.div`

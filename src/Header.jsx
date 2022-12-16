@@ -65,8 +65,10 @@ const NavItems = styled.nav`
   gap: 32px;
 `;
 const NavItem = styled.a`
-  font-family: 'Syne', sans-serif;
+  /* font-family: 'Syne', sans-serif; */
+  font-family: 'Monument', sans-serif;
+  font-size: 14px;
   font-weight: 500;
-  color: #b8c2a9;
+  color: #e8e8e8;
 `;
 export default Header;

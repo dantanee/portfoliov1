@@ -10,9 +10,7 @@ const Footer = () => {
     <Wrapper>
       <TextSection>
         <p>Got a project?</p>
-        <Heading1>
-          <AnimatedSpan>LET'S TALK</AnimatedSpan>
-        </Heading1>
+        <Heading1>LET'S TALK</Heading1>
       </TextSection>
       <ContactSection>
         <Info>
@@ -45,15 +43,18 @@ const TextSection = styled.div`
 
   & p {
     /* color: #b8c2a9; */
-    color: #fffde4;
+    font-family: 'Axiforma', sans-serif;
+    color: #e8e8e8;
     opacity: 0.7;
   }
 `;
 const Heading1 = styled.h1`
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 800;
   /* color: #b8c2a9; */
-  color: #fffde4;
+  font-family: 'Monument', sans-serif;
+  color: #e8e8e8;
+  text-transform: uppercase;
   @media (max-width: 550px) {
     font-size: 48px;
   }
@@ -74,9 +75,9 @@ const Info = styled.div`
 `;
 const Span = styled.span`
   /* color: #b8c2a9; */
-  color: #fffde4;
+  color: #e8e8e8;
   opacity: 0.7;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Axiforma', sans-serif;
   font-size: 18px;
   @media (max-width: 550px) {
     font-size: 16px;

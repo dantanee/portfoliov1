@@ -55,7 +55,8 @@ const About = () => {
 
 const Wrapper = styled.div`
   padding: 0 144px;
-  background-image: linear-gradient(180deg, #012e20 38%, #010101 100%, #010101);
+  /* background-image: linear-gradient(180deg, #012e20 38%, #010101 100%, #010101); */
+  background-color: #14262a;
 `;
 const Button = styled.button`
   display: flex;
