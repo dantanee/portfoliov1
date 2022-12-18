@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import WhatsApp from './assets/whatsapp.svg';
 import EnvelopeClosed from './assets/envelope.svg';
 import LinkedIn from './assets/linkedin.svg';
-import { AnimatedSpan } from './Hero';
 
 const Footer = () => {
   return (
@@ -59,6 +58,7 @@ const Heading1 = styled.h1`
   font-weight: 800;
   /* color: #b8c2a9; */
   font-family: 'Monument', sans-serif;
+  letter-spacing: -4px;
   color: #e8e8e8;
   text-transform: uppercase;
   @media (max-width: 550px) {

@@ -8,22 +8,12 @@ import Works from './Works';
 import HeroBg from './assets/blackherobg.png';
 import HomeHeader from './HomeHeader';
 import BgVideo from './video/blobsimple.mp4';
-import TorchLight from './assets/torchlight.png';
+import TorchLight from './assets/torch.png';
 
 const Home = () => {
   return (
     <div>
       <AboveFold>
-        <img
-          src={TorchLight}
-          alt=""
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '90%',
-            transform: 'translate(-50%,-50%)',
-          }}
-        />
         <video
           autoPlay
           loop
@@ -39,6 +29,16 @@ const Home = () => {
         >
           <source src={BgVideo} type="video/mp4" />
         </video>
+        <img
+          src={TorchLight}
+          alt=""
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '40%',
+            transform: 'translate(-50%,-50%)',
+          }}
+        />
         <HeaderWrapper>
           <HomeHeader />
         </HeaderWrapper>
@@ -72,7 +72,7 @@ const FooterWrapper = styled.div`
 `;
 const AboveFold = styled.div`
   display: flex;
-  height: 650px;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   /* background-image: linear-gradient(180deg, #012e20 38%, #010101 100%, #010101); */

@@ -305,7 +305,7 @@ const Heading2 = styled.h1`
   display: flex;
   justify-content: center;
   font-family: 'Monument', sans-serif;
-  /* letter-spacing: -3px; */
+  letter-spacing: -4px;
   font-size: 60px;
   font-weight: 700;
   @media (max-width: 550px) {
@@ -407,6 +407,8 @@ const TextSection = styled.div`
     font-size: 48px;
     font-weight: 600;
     font-family: 'Monument', sans-serif;
+    letter-spacing: -4px;
+    text-transform: uppercase;
     /* color: #b8c2a9; */
     color: #e8e8e8;
     @media (max-width: 550px) {

@@ -1,20 +1,34 @@
-import { React, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './assets/logonew.svg';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const [colorChange, setColorchange] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-  window.addEventListener('scroll', changeNavbarColor);
+  const [headerStyle, setHeaderStyle] = useState({});
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setHeaderStyle({
+          background: 'hsl(0deg 0% 20% / 0.1)',
+          backdropFilter: 'blur(12px)',
+          // -webkit-backdrop-filter: blur(12px);
+          color: '#fff',
+        });
+      } else {
+        setHeaderStyle({});
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <Wrapper>
+    <Wrapper style={headerStyle}>
       <Link to="/" style={{ textDecoration: 'none' }}>
         <img src={logo} alt="logo" />
       </Link>
@@ -25,9 +39,9 @@ const Header = () => {
         <Link style={{ textDecoration: 'none' }} to="/about">
           <NavItem>about</NavItem>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/">
+        {/* <Link style={{ textDecoration: 'none' }} to="/">
           <NavItem>contact</NavItem>
-        </Link>
+        </Link> */}
       </NavItems>
     </Wrapper>
   );
@@ -39,9 +53,7 @@ const Wrapper = styled.div`
   align-items: center;
   height: 80px;
   padding: 0 128px 0;
-  background: hsl(0deg 0% 20% / 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+
   @media (max-width: 550px) {
     display: none;
   }
