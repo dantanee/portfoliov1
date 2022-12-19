@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import WhatsApp from './assets/whatsapp.svg';
+import WhatsApp from './assets/whatsappicon.svg';
 import EnvelopeClosed from './assets/envelope.svg';
 import LinkedIn from './assets/linkedin.svg';
 
