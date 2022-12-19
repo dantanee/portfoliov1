@@ -87,7 +87,7 @@ const Hero = () => {
         ))}
         <h1 style={{ fontSize: '48px', color: 'white' }}> Hello</h1> */}
         <Heading>
-          I design innovative solutions for real-world problems.
+          I create designs that solve user needs and meet business goals.
         </Heading>
 
         <Scroll>
