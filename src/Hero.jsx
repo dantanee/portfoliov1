@@ -90,7 +90,7 @@ const Hero = () => {
           I create designs that solve user needs and meet business goals.
         </Heading>
 
-        <Scroll>
+        <Scroll style={{ alignSelf: 'center' }}>
           <a>scroll down</a>
           <img src={Arrowdown} alt="" />
         </Scroll>
