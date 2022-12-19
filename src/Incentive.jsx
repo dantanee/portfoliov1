@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import IncentiveBackground from './assets/incentive-landing.svg';
 import RightHand from './assets/right-hand.svg';
@@ -31,6 +31,11 @@ import { Link } from 'react-router-dom';
 
 const IncentiveCaseStudy = () => {
   const [hover, setHover] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Wrapper>
       <HeaderWrapper>

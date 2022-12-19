@@ -1,50 +1,50 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import logo from './assets/newlogo.svg';
 import LogoBlack from './assets/logoblack.png';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const [colorChange, setColorchange] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-  window.addEventListener('scroll', changeNavbarColor);
+  const [headerStyle, setHeaderStyle] = useState({});
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setHeaderStyle({
+          background: 'hsl(0deg 0% 20% / 0.1)',
+          backdropFilter: 'blur(12px)',
+          // -webkit-backdrop-filter: blur(12px);
+          color: '#121212',
+        });
+      } else {
+        setHeaderStyle({});
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <Wrapper>
+    <Wrapper style={headerStyle}>
       <Link to="/" style={{ textDecoration: 'none' }}>
-        {colorChange ? (
-          <img src={LogoBlack} alt="logo" />
-        ) : (
-          <img src={LogoBlack} alt="" />
-        )}
+        <img src={LogoBlack} alt="logo" />
       </Link>
       <NavItems>
         <Link style={{ textDecoration: 'none' }} to="/">
-          <NavItem
-            style={colorChange ? { color: '#121212' } : { color: '#121212' }}
-          >
-            works
-          </NavItem>
+          <NavItem>works</NavItem>
         </Link>
         <Link style={{ textDecoration: 'none' }} to="/about">
-          <NavItem
-            style={colorChange ? { color: '#121212' } : { color: '#121212' }}
-          >
-            about
-          </NavItem>
+          <NavItem>about</NavItem>
         </Link>
-        <Link style={{ textDecoration: 'none' }}>
+        {/* <Link style={{ textDecoration: 'none' }}>
           <NavItem
             style={colorChange ? { color: '#121212' } : { color: '#121212' }}
           >
             contact
           </NavItem>
-        </Link>
+        </Link> */}
       </NavItems>
     </Wrapper>
   );
@@ -56,9 +56,8 @@ const Wrapper = styled.div`
   align-items: center;
   height: 80px;
   padding: 0 128px 0;
-  background: hsl(0deg 0% 20% / 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+
+  /* -webkit-backdrop-filter: blur(12px); */
 `;
 const NavItems = styled.nav`
   display: flex;
@@ -69,6 +68,6 @@ const NavItem = styled.a`
   font-family: 'Monument', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #e8e8e8;
+  color: #121212;
 `;
 export default Header;

@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Header from './Header';
 import Women from './assets/women.svg';
@@ -16,6 +16,9 @@ import PreviousUp from './assets/arrow-left-black.svg';
 import PreviousIcon from './assets/arrow-left-black.svg';
 
 const DiffCaseStudy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Wrapper>
       <AboveFold>
@@ -343,6 +346,7 @@ const AboveFold = styled.div`
   background-color: #fffff;
   position: relative;
   overflow: hidden;
+  height: 100vh;
 `;
 const Heading = styled.h1`
   font-family: 'DIN2014', sans-serif;
@@ -375,7 +379,7 @@ const Hero = styled.div`
   position: relative;
   margin-top: 80px;
   padding: 120px 100px 0px;
-  height: 600px;
+  /* height: 600px; */
   background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23374af0' fill-opacity='0.03'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 `;

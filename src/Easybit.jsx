@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import BtcHero from './assets/btchero.png';
 
@@ -25,6 +25,11 @@ import ReactPlayer from 'react-player';
 
 const EasyBitCaseStudy = () => {
   const [hover, setHover] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Wrapper>
       <AboveFold>
@@ -413,7 +418,7 @@ const AboveFold = styled.div`
   background-color: #e9f1ff;
   position: relative;
   overflow: hidden;
-  height: 700px;
+  height: 100vh;
 `;
 const Heading = styled.h1`
   font-family: 'DIN2014', sans-serif;

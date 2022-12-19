@@ -67,7 +67,7 @@ const Hero = () => {
             fontSize: '18px',
             fontWeight: '600',
             color: '#9e8d8d',
-            marginBottom: '32px',
+            marginBottom: '64px',
             fontFamily: 'Monument, sans-serif',
           }}
         >

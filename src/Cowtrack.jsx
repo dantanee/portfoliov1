@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import TrakaBackground from './assets/cowtraka.svg';
 import TrakaHero from './assets/trakahero.svg';
@@ -22,6 +22,11 @@ import { Link } from 'react-router-dom';
 
 const TrakaCaseStudy = () => {
   const [hover, setHover] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Wrapper>
       <AboveFold>
@@ -225,7 +230,7 @@ const TrakaCaseStudy = () => {
           </div> */}
           <Previous
             style={{ textDecoration: 'none', zIndex: '10' }}
-            to="/tarkin"
+            to="/incentive"
           >
             <Button
               onMouseEnter={() => setPrevHover(true)}
@@ -267,7 +272,7 @@ const HeaderWrapper = styled.div`
 const AboveFold = styled.div`
   position: relative;
 
-  height: 850px;
+  height: 100vh;
   background-image: url(${TrakaBackground});
   overflow: hidden;
 `;
